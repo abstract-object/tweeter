@@ -1,37 +1,40 @@
-article:hover {
-  filter: opacity(100%) !important;
-  display: block;
+#tweets article:hover header, #tweets article:hover .icon {
+  filter: opacity(100%);
 }
 
-.tweet article {
-  position: relative;
+#tweets article:hover {
+  border: 1px solid #888;
+}
+
+#tweets article {
   top: 80px;
   margin-top: 10px;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 2rem;
+  margin-right: 2rem;
   border-radius: 5px;
-  border: 1px solid #999;
-  background-color: #ddd;
-  filter: opacity(60%);
+  border: 1px solid #bbb;
 }
    
-.tweet header {
+#tweets header {
   height: 70px;
   padding: 10px;
+  background-color: #ddd;
+  background-clip: padding-box;
+  filter: opacity(60%);
 }
 
-.tweet header span {
+#tweets header span {
   line-height: 1.75;
   float: right;
 }
 
-.tweet header img {
+#tweets header img {
   height: 50px;
   width: 50px;
   float: left;
 }
 
-.tweet h2 {
+#tweets h2 {
   margin-block-start: 0;
   padding-left: 10px;
   float: left;
@@ -42,23 +45,24 @@ article:hover {
   align-items: center;
   height: 100px;
   width: 100%;
-  background-color: #fff;
   padding-left: 15px;
   padding-right: 15px;
   border-bottom: 1px solid #eee;
 }
 
-.tweet footer {
+#tweets footer {
   height: 35px;
   line-height: 2;
-  background-color: #fff;
   padding-left: 10px;
   padding-right: 10px;
-  background-clip: padding-box;
 }
 
-.tweet footer img {
+.icon {
+  filter: opacity(0%);
+  float: right;
+}
+
+#tweets footer img {
   height: 30px;
   width: 75px;
-  float: right;
 }

@@ -1,9 +1,6 @@
 .new-tweet {
-  position: relative;
-  top: 80px;
-  margin-top: 4em;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 2rem;
+  margin-right: 2rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 10px;
