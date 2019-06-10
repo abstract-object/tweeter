@@ -22,3 +22,7 @@
 .counter {
   float: right;
 }
+
+#overCharLimit {
+  color: #f00;
+}
