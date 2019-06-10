@@ -1,3 +1,8 @@
+article:hover {
+  filter: opacity(100%) !important;
+  display: block;
+}
+
 .tweet article {
   position: relative;
   top: 80px;
@@ -5,8 +10,9 @@
   margin-left: 2em;
   margin-right: 2em;
   border-radius: 5px;
-  border: 1px solid #ddd;
-  background-color: #eee;
+  border: 1px solid #999;
+  background-color: #ddd;
+  filter: opacity(60%);
 }
    
 .tweet header {
@@ -52,7 +58,7 @@
 }
 
 .tweet footer img {
-    height: 30px;
-    width: 75px;
-    float: right;
-  }
+  height: 30px;
+  width: 75px;
+  float: right;
+}
