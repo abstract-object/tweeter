@@ -1,0 +1,58 @@
+.tweet article {
+  position: relative;
+  top: 80px;
+  margin-top: 10px;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+}
+   
+.tweet header {
+  height: 70px;
+  padding: 10px;
+}
+
+.tweet header span {
+  line-height: 1.75;
+  float: right;
+}
+
+.tweet header img {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.tweet h2 {
+  margin-block-start: 0;
+  padding-left: 10px;
+  float: left;
+}
+
+.tweetText {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.tweet footer {
+  height: 35px;
+  line-height: 2;
+  background-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-clip: padding-box;
+}
+
+.tweet footer img {
+    height: 30px;
+    width: 75px;
+    float: right;
+  }
