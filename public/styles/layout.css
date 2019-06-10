@@ -25,9 +25,35 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main.container {
+ .container {
+   height: 100vh;
    width: 450px;
    margin: auto;
    margin-top: 80px;
    background-color: #fff;
+ }
+
+ .new-tweet {
+   position: relative;
+   top: 80px;
+   margin-top: 4em;
+   margin-left: 2em;
+   margin-right: 2em;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   padding: 10px;
+   background-color: #eee;
+ }
+
+ .new-tweet h2 {
+   margin-block-start: 0;
+   border-bottom: 1px solid #000;
+ }
+
+ .new-tweet textarea {
+   width: 100%;
+ }
+
+ .counter {
+   float: right;
  }
