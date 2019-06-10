@@ -28,6 +28,7 @@ body {
 .container {
   width: 450px;
   padding-top: 60px;
+  padding-bottom: 60px;
   margin: auto;
   background-color: #fff;
 }
