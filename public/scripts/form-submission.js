@@ -3,7 +3,7 @@ $(document).ready(() => {
     event.preventDefault();
     if ($(this).find("textarea").val().length <= 0) {
       alert("Please enter a message.");
-    } else if ($(this).find("textarea").val().length >= 140) {
+    } else if ($(this).find("textarea").val().length > 140) {
       alert("Your message is too long.");
     } else {
       $.ajax("/tweets/", {
