@@ -21,21 +21,21 @@
 
     <!-- App JS -->
     <script type="module" src="/scripts/app.js"></script>
-    <script src="/scripts/composer-char-counter.js"></script>
+    <script type="module" src="/scripts/composer-char-counter.js"></script>
     <script type="module" src="/scripts/form-submission.js"></script>
   </head>
 
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button>Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section id="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>

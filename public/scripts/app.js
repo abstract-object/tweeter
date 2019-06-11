@@ -1,16 +1,9 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+"use strict";
 
-export const loadTweets = () => {
-  $.getJSON("/tweets", (data) => {
-    $("#tweets").empty();
-    renderTweets(data);
-  });
-};
-  
+import {composerCharCounter} from "./composer-char-counter.js";
+import {composerToggle} from "./composerToggle.js";
+import {submitForm} from "./form-submission.js";
+
 const createTweetElement = (tweetData) => {
   let $tweet = $("<article>");
   let $header = $("<header>");
@@ -34,6 +27,18 @@ const renderTweets = (allTweets) => {
   };
 };
 
-$(document).ready(() => {
+export const loadTweets = () => {
+  $.getJSON("/tweets", (data) => {
+    $("#tweets").empty();
+    renderTweets(data);
+  });
+};
+
+const loadScripts = () => {
   loadTweets();
-});
+  composerCharCounter();
+  composerToggle();
+  submitForm();
+};
+
+$(document).ready(loadScripts);

@@ -1,7 +1,9 @@
+"use strict";
+
 import {loadTweets} from "./app.js";
 
-$(document).ready(() => {
-  $(".new-tweet form").on("submit", function(event) {
+export const submitForm = () => {
+  $("#new-tweet form").on("submit", function(event) {
     event.preventDefault();
     if ($(this).find("textarea").val().length <= 0) {
       alert("Please enter a message.");
@@ -18,4 +20,4 @@ $(document).ready(() => {
       $(this).find("textarea").val("");
     }
   });
-});
+};

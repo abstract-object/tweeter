@@ -1,15 +1,13 @@
 #nav-bar {
-  position: sticky;
+  position: fixed;
   height: 80px;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #00a087;
-  color: #e8fdff;
-  padding-top: 0;
-  padding-bottom: 0;
   padding-left: 2rem;
   padding-right: 2rem;
+  background-color: #00a087;
+  color: #e8fdff;
   z-index: 1;
 }
 
