@@ -1,3 +1,5 @@
+import {loadTweets} from "./app.js";
+
 $(document).ready(() => {
   $(".new-tweet form").on("submit", function(event) {
     event.preventDefault();
@@ -10,7 +12,7 @@ $(document).ready(() => {
         method: "POST",
         data: $(this).find("textarea").serialize(),
         success: function() {
-          console.log("Successful POST");
+          loadTweets();
         }
       });
       $(this).find("textarea").val("");

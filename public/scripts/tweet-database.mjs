@@ -1,12 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 export const loadTweets = () => {
-  $.getJSON("/tweets", (data) => {
-    $("#tweets").empty();
+  $.getJSON( "/tweets", (data) => {
     renderTweets(data);
   });
 };
@@ -29,11 +22,7 @@ const createTweetElement = (tweetData) => {
 };
   
 const renderTweets = (allTweets) => {
-  for (let tweet of allTweets.reverse()) {
+  for (let tweet of allTweets) {
     $(createTweetElement(tweet)).appendTo("#tweets");
-  };
+  }
 };
-
-$(document).ready(() => {
-  loadTweets();
-});
