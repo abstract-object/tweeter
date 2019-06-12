@@ -14,6 +14,7 @@ const createTweetElement = (tweetData) => {
                            .text(tweetData.content.text);
   let $footer = $("<footer>");
   
+  // Not the way recommended by Compass, but probably more readable.
   $header.append(`<img src="${tweetData.user.avatars.small}">`);
   $header.append(`<h2>${tweetData.user.name}</h2>`);
   $header.append(`<span>${tweetData.user.handle}</span>`);
@@ -34,9 +35,9 @@ const createTweetElement = (tweetData) => {
 // As the tweets are already sorted by newest after retrieval
 // from the database, tweets are prepended to the tweet container.
 const renderTweets = (allTweets) => {
-  for (let tweet of allTweets) {
+  allTweets.forEach((tweet) => {
     $(createTweetElement(tweet)).prependTo("#tweets");
-  };
+  });
 };
 
 // Retrieve database, then empty the tweet container before rendering.
@@ -51,7 +52,7 @@ export const loadTweets = () => {
 const loadScripts = () => {
   // JQuery timeago plugin
   $("time.timeago").timeago();
-  
+
   loadTweets();
   composerCharCounter();
   composerToggle();

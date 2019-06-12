@@ -10,7 +10,7 @@ export const submitForm = () => {
 
     // Stop normal submission and hide error when submitting.
     event.preventDefault();
-    $error.hide(50);
+    $error.hide(100);
 
     // Set correct error message.
     if ($msg.val().length === 0) {
@@ -22,18 +22,21 @@ export const submitForm = () => {
     // Show error only if there is one, or else if no error:
     $error.text(errMsg);
     if (errMsg) {
-      $error.slideDown(50);
+      $error.slideDown(100);
     } else {
       // Save message to db, then reload tweets.
       $.ajax("/tweets/", {
         method: "POST",
         data: $msg.serialize(),
-        success: function() {
+        success: () => {
           loadTweets();
         }
       });
       // Finally clear message.
       $msg.val("");
+      // Manually set counter, because clearing the message this
+      // way is not registered as input.
+      $msg.siblings(".counter").text(140);
     }
   });
 }

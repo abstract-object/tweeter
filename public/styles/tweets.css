@@ -47,8 +47,8 @@
   padding-left: 15px;
   padding-right: 15px;
   border-bottom: 1px solid #eee;
-  word-break: break-all;
   font-size: 125%;
+  word-break: break-word;
 }
 
 #tweets footer {

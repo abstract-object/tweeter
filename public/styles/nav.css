@@ -18,13 +18,22 @@
 }
 
 #nav-bar .header {
+  height: 100%;
+  display: flex;
+  align-items: center;
   font-size: 200%;
-  line-height: 2.25;
   padding-left: 10px;
   float: left;
 }
 
-#nav-bar .buttons {
+#nav-bar span.buttons {
+  height: 100%;
+  display: flex;
+  align-items: center;
   float: right;
+}
+
+#nav-bar button {
+  padding: 1rem;
 }
   

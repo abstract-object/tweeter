@@ -1,4 +1,5 @@
 #new-tweet {
+  display: none;
   margin-left: 2rem;
   margin-right: 2rem;
   border-radius: 5px;
@@ -27,5 +28,9 @@
 }
 
 #new-tweet .counter {
+  font-size: 90%;
+  font-style: oblique;
+  line-height: 2;
+  padding-right: 5px;
   float: right;
 }
