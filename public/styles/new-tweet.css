@@ -17,14 +17,18 @@
   width: 100%;
 }
 
+#new-tweet input {
+  font-size: 125%;
+}
+
 #new-tweet .error {
   color: #f00;
 }
 
 #new-tweet div.error {
   display: none;
-  background-color: #fff;
-  height: 10px;
+  text-align: center;
+  height: 25px;
 }
 
 #new-tweet .counter {

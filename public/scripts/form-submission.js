@@ -10,7 +10,7 @@ export const submitForm = () => {
 
     // Stop normal submission and hide error when submitting.
     event.preventDefault();
-    $error.hide(100);
+    $error.slideUp("fast");
 
     // Set correct error message.
     if ($msg.val().length === 0) {
@@ -20,9 +20,9 @@ export const submitForm = () => {
     }
 
     // Show error only if there is one, or else if no error:
-    $error.text(errMsg);
+    $error.html(`<i class="fa fa-exclamation-triangle"></i> ${errMsg}`);
     if (errMsg) {
-      $error.slideDown(100);
+      $error.slideDown("fast");
     } else {
       // Save message to db, then reload tweets.
       $.ajax("/tweets/", {
@@ -32,7 +32,7 @@ export const submitForm = () => {
           loadTweets();
         }
       });
-      // Finally clear message.
+      // Finally, clear message.
       $msg.val("");
       // Manually set counter, because clearing the message this
       // way is not registered as input.

@@ -34,6 +34,16 @@
 }
 
 #nav-bar button {
-  padding: 1rem;
+  font-size: 125%;
+  color: #00a087;
+  background-color: #e7fDfe;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+#nav-bar button:hover {
+  color: #000;
+  background-color: #fff;
 }
   
