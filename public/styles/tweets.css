@@ -39,7 +39,7 @@
   float: left;
 }
 
-.tweetText {
+#tweets .tweetText {
   display: flex;
   align-items: center;
   height: 100px;
@@ -48,6 +48,7 @@
   padding-right: 15px;
   border-bottom: 1px solid #eee;
   word-break: break-all;
+  font-size: 125%;
 }
 
 #tweets footer {
@@ -57,7 +58,7 @@
   padding-right: 10px;
 }
 
-.icon {
+#tweets .icon {
   filter: opacity(0%);
   float: right;
 }

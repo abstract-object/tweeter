@@ -16,18 +16,16 @@
   width: 100%;
 }
 
-.error {
-  display: none;
-  width: 100%;
+#new-tweet .error {
   color: #f00;
+}
+
+#new-tweet div.error {
+  display: none;
   background-color: #fff;
   height: 10px;
 }
 
-.counter {
+#new-tweet .counter {
   float: right;
-}
-
-#overCharLimit {
-  color: #f00;
 }
