@@ -1,6 +1,6 @@
 #nav-bar {
   position: fixed;
-  height: 80px;
+  height: 5rem;
   top: 0;
   left: 0;
   right: 0;
@@ -12,8 +12,8 @@
 }
 
 #nav-bar .logo {
-  height: 80px;
-  width: 80px;
+  height: 5rem;
+  width: 5rem;
   float: left;
 }
 
@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   font-size: 200%;
-  padding-left: 10px;
+  padding-left: 0.5rem;
   float: left;
 }
 
@@ -37,8 +37,8 @@
   font-size: 125%;
   color: #00a087;
   background-color: #e7fDfe;
-  border: 1px solid #000;
-  border-radius: 4px;
+  border: 0.05rem solid #000;
+  border-radius: 0.2rem;
   padding: 1rem 0.5rem 1rem 0.5rem;
 }
 

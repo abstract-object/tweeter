@@ -2,15 +2,15 @@
   display: none;
   margin-left: 2rem;
   margin-right: 2rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 10px;
+  border-radius: 0.25rem;
+  border: 0.05rem solid #ccc;
+  padding: 0.5rem;
   background-color: #eee;
 }
  
 #new-tweet h2 {
   margin-block-start: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 0.05rem solid #000;
 }
  
 #new-tweet textarea {
@@ -28,7 +28,7 @@
 #new-tweet div.error {
   display: none;
   text-align: center;
-  height: 25px;
+  height: 1.25rem;
 }
 
 #new-tweet .counter {
