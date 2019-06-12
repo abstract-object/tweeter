@@ -15,7 +15,15 @@
 #new-tweet textarea {
   width: 100%;
 }
- 
+
+.error {
+  display: none;
+  width: 100%;
+  color: #f00;
+  background-color: #fff;
+  height: 10px;
+}
+
 .counter {
   float: right;
 }

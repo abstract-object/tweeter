@@ -5,10 +5,14 @@ import {loadTweets} from "./app.js";
 export const submitForm = () => {
   $("#new-tweet form").on("submit", function(event) {
     event.preventDefault();
+    $(".error").hide(50);
+
     if ($(this).find("textarea").val().length <= 0) {
-      alert("Please enter a message.");
+        $(".error").text("You can't send an empty tweet.");
+        $(".error").slideDown(50);
     } else if ($(this).find("textarea").val().length > 140) {
-      alert("Your message is too long.");
+        $(".error").text("Your message is too long.");
+        $(".error").slideDown(50);
     } else {
       $.ajax("/tweets/", {
         method: "POST",

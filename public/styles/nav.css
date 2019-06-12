@@ -15,12 +15,16 @@
   height: 80px;
   width: 80px;
   float: left;
-  }
+}
 
 #nav-bar .header {
   font-size: 200%;
   line-height: 2.25;
   padding-left: 10px;
   float: left;
+}
+
+#nav-bar .buttons {
+  float: right;
 }
   

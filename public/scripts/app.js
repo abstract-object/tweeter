@@ -1,7 +1,7 @@
 "use strict";
 
 import {composerCharCounter} from "./composer-char-counter.js";
-import {composerToggle} from "./composerToggle.js";
+import {composerToggle} from "./composer-toggle.js";
 import {submitForm} from "./form-submission.js";
 
 const createTweetElement = (tweetData) => {
@@ -14,7 +14,7 @@ const createTweetElement = (tweetData) => {
   $header.append(`<h2>${tweetData.user.name}</h2>`);
   $header.append(`<span>${tweetData.user.handle}</span>`);
   $footer.append(`<span>${new Date() - tweetData.created_at}</span>`);
-  $footer.append(`<span class="icon"></span>`);
+  $footer.append(`<span class="icon"><img src="/images/icons.png"></span>`);
   $tweet.append($header);
   $tweet.append($content);
   $tweet.append($footer);

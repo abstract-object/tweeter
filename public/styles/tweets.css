@@ -47,6 +47,7 @@
   padding-left: 15px;
   padding-right: 15px;
   border-bottom: 1px solid #eee;
+  word-break: break-all;
 }
 
 #tweets footer {
@@ -61,7 +62,7 @@
   float: right;
 }
 
-#tweets footer img {
+.icon img {
   height: 30px;
   width: 75px;
 }

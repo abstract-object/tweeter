@@ -9,7 +9,7 @@ export const composerToggle = () => {
         $("#new-tweet textarea").focus();
       } else {
         $("html, body").animate({
-        scrollTop: ($("#tweets").offset().top - 140)
+        scrollTop: ($("#tweets").offset().top - 80)
         }, 100);
       }
     });
