@@ -1,0 +1,40 @@
+#new-tweet {
+  display: none;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 0.25rem;
+  border: 0.05rem solid #ccc;
+  padding: 0.5rem;
+  background-color: #eee;
+}
+ 
+#new-tweet h2 {
+  margin-block-start: 0;
+  border-bottom: 0.05rem solid #000;
+}
+ 
+#new-tweet textarea {
+  width: 100%;
+}
+
+#new-tweet input {
+  font-size: 125%;
+}
+
+#new-tweet .error {
+  color: #f00;
+}
+
+#new-tweet div.error {
+  display: none;
+  text-align: center;
+  height: 1.25rem;
+}
+
+#new-tweet .counter {
+  font-size: 90%;
+  font-style: oblique;
+  line-height: 2;
+  padding-right: 5px;
+  float: right;
+}

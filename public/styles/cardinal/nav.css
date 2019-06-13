@@ -1,0 +1,71 @@
+#nav-bar {
+  position: fixed;
+  height: 5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-image: linear-gradient(#e60000, #b30000);
+  color: #000000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#nav-bar:before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  border-top: 4.75rem solid #b30000;
+  border-left: 5rem solid #800000;
+  width: 0;
+  box-shadow: -0.1rem 0.1rem 3rem rgba(0, 0, 0, 0.4);
+  transition: border 3s;
+  z-index: 2;
+}
+
+#nav-bar:hover::before {
+  border-top: 1.75rem solid #b30000;
+  border-left: 2rem solid #800000;
+}
+
+#nav-bar .logo {
+  margin-top: 1rem;
+  height: 3rem;
+  width: 3rem;
+  float: left;
+}
+
+#nav-bar .header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 200%;
+  font-weight: bold;
+  margin-left: -0.5rem;
+  float: left;
+}
+
+#nav-bar span.buttons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  float: right;
+}
+
+#nav-bar button {
+  font-size: 90%;
+  color: #ffe3e3;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 0.1rem solid #ffe3e3;
+  border-radius: 1.2rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  margin: 0.3rem;
+  transition: background 1s;
+}
+
+#nav-bar button:hover {
+  color: #000;
+  background-color: #fff;
+}
+  
