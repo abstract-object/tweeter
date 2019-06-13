@@ -67,3 +67,7 @@
   filter: opacity(0%);
   float: right;
 }
+
+#tweets .icon i:hover {
+  transform: scale(1.15);
+}
