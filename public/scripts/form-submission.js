@@ -8,9 +8,8 @@ export const submitForm = () => {
     let $msg = $(this).find("textarea");
     let errMsg = "";
 
-    // Stop normal submission and hide error when submitting.
+    // Stop normal submission.
     event.preventDefault();
-    $error.slideUp("fast");
 
     // Set correct error message.
     if ($msg.val().length === 0) {

@@ -1,11 +1,15 @@
 "use strict";
 
-const userHelper    = require("../lib/util/user-helper")
-
 const express       = require('express');
+const cookieSession = require("cookie-session");
+
 const tweetsRoutes  = express.Router();
 
-module.exports = function(DataHelpers) {
+const app           = express();
+
+app.use(cookieSession({name: "session", secret: "it's a secret to everybody"}));
+
+module.exports = function(DataHelpers, UserHelpers) {
 
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
@@ -21,9 +25,12 @@ module.exports = function(DataHelpers) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
-    }
+    } //else if (!req.session.user || !authorized(req.session.user, req.body.user)) {
+      //res.status(403).json({ error: 'not logged in'});
+      //return;
+    //}
 
-    const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
+    const user = req.session.user ? req.session.user : UserHelpers.generateRandomUser();
     const tweet = {
       user: user,
       content: {

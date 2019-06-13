@@ -22,12 +22,16 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
   const DataHelpers = require("./lib/data-helpers.js")(db);
-
-  const tweetsRoutes = require("./routes/tweets")(DataHelpers);
-
+  const UserHelpers = require("./lib/user-helpers.js")(db);
+  const tweetsRoutes = require("./routes/tweets")(DataHelpers, UserHelpers);
+  // const usersRoutes = require("./routes/users")(UserHelpers);
   app.use("/tweets", tweetsRoutes);
+  // app.use("/users", usersRoutes);
 });
 
+/* app.get("*", (req, res) => {
+  res.status(404).send("<h1>404 PAGE NOT FOUND</h1>");
+}); */
 
 app.listen(PORT, () => {
   console.log("Tweeter listening on port " + PORT);
